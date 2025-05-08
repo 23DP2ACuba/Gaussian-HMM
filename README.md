@@ -25,24 +25,20 @@ This project implements a **Hidden Markov Model (HMM)** strategy for time-series
 .
 ├── hmm_strategy.py        # HMM training + backtest on MSFT
 ├── hmm_tester.py          # Loads pretrained model and tests on ETH-USD
-├── hmm_model_MSFT.pkl     # Trained HMM model for MSFT (output)
-├── scaler_MSFT.pkl        # Scaler used for MSFT feature normalization (output)
-├── hmm_model_ETH.pkl      # Trained HMM model for ETH (expected for testing)
-├── scaler_ETH.pkl         # Scaler for ETH data (expected for testing)
+├── hmm_model_<asset_name>.pkl     # Trained HMM model for MSFT (output)
+├── scaler_<asset_name>.pkl        # Scaler used for MSFT feature normalization (output)
 └── README.md              # This file
 ```
 
 ---
 
-## 🔧 Setup Instructions
-
-1. **Install Dependencies**
+**Dependencies**
 
 ```bash
 pip install numpy pandas yfinance hmmlearn scikit-learn matplotlib
 ```
 
-2. **Run the HMM Trainer + Backtester**
+**Run the HMM Trainer + Backtester**
 
 ```bash
 python hmm_strategy.py
