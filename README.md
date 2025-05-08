@@ -42,28 +42,11 @@ This project implements a **Hidden Markov Model (HMM)** strategy for time-series
 pip install numpy pandas yfinance hmmlearn scikit-learn matplotlib
 ```
 
-2. **Run the MSFT Trainer + Backtester**
+2. **Run the HMM Trainer + Backtester**
 
 ```bash
 python hmm_strategy.py
 ```
-
-This will:
-- Download `MSFT` data
-- Train an HMM model
-- Save the model and scaler
-- Simulate trading and print ROI and trade details
-- Display trade visualization
-
-3. **Run the ETH Tester (using pre-trained model)**
-
-Ensure `hmm_model_ETH.pkl` and `scaler_ETH.pkl` are placed in the expected path (`/content/`) or update the path in `hmm_tester.py`.
-
-```bash
-python hmm_tester.py
-```
-
----
 
 ## 📈 Trading Logic
 
@@ -86,21 +69,3 @@ Both scripts provide:
 - Number of profitable and losing trades (in `hmm_tester.py`)
 
 ---
-
-## 📌 Notes
-
-- Historical data range: `2020-01-01` to `2026-01-01`
-- Trained model is time-aware and avoids data leakage using a gap between train/test
-- Model retraining can be done on any asset by updating ticker symbol and filenames
-
----
-
-## 🛡️ Disclaimer
-
-This code is for educational and research purposes only. It is **not financial advice**. Historical performance does not guarantee future results.
-
----
-
-## 📬 Contact
-
-For questions, reach out or fork this repo to contribute improvements.
